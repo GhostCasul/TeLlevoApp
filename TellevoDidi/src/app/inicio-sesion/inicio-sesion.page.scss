@@ -1,0 +1,58 @@
+ion-header {
+  --background: #615b5b;
+  --color: #726d6d;
+}
+
+ion-content{
+  --background: url('../../assets/img/Alameda.jpg') no-repeat center center / cover;
+}
+
+h2 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+ion-item {
+  --ion-item-border-color: #00000000;
+}
+
+ion-card {
+  margin: 20px;
+  border-radius: 15px;
+}
+
+ion-button {
+  width: 70%;
+  margin: 15px auto 20px;
+  display: block;
+  font-weight: bold;
+  --background: #ffcc00;
+  --color: #333;
+}
+
+h1 {
+  text-align: center;
+  font-size: 16px;
+  color: #ffffff;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.fot{
+  width: 100%;
+  margin: 15px;
+  display: block;
+  font-weight: bold;
+  --background: #ffcc00;
+  --color: #333;
+}
