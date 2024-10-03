@@ -1,0 +1,49 @@
+<ion-content>
+  <ion-card>
+    <img alt="logo" src="assets/img/Logo.png"/>
+    <ion-card-header>
+      <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+        <ion-item>
+          <ion-input
+            name="usuario"
+            label="Usuario"
+            labelPlacement="floating"
+            [counter]="true"
+            minlength="6"
+            maxlength="12"
+            [(ngModel)]="usuario"
+            #usuarioInput="ngModel"
+            required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            label="Contraseña"
+            type="password"
+            labelPlacement="floating"
+            [counter]="true"
+            minlength="6"
+            maxlength="40"
+            [(ngModel)]="password"
+            name="password"
+            #passwordInput="ngModel"
+            required>
+          </ion-input>
+        </ion-item>
+        <a routerLink="/reset-password">Restablecer Contraseña</a>
+        <ion-button expand="block" type="submit" [disabled]="!loginForm.valid">
+          Ingresar
+          <ion-icon slot="end" name="star"></ion-icon>
+        </ion-button>
+      </form>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button class="fot" [routerLink]="['/sign-up']">Registrarse</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
