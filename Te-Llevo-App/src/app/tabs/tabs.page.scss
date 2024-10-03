@@ -1,0 +1,26 @@
+
+ion-content {
+  --overflow: auto;
+  --padding-bottom: 60px;
+}
+
+ion-item {
+  margin: 8px 4px;
+  --background: #ffffff;
+  --border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ion-label p {
+  font-size: 20px;
+  color: #000000;
+}
+
+ion-button {
+  width: 25%;
+  height: 50px;
+  --background: #ffcc00;
+  --color: #000000;
+  border-radius: 16px;
+  font-size: 18px;
+}

@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img alt="logo" src="assets/img/logo login+.jpg"/>
+    <ion-card-header>
+      <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+        <ion-item>
+          <ion-input
+            name="usuario"
+            label="Usuario"
+            labelPlacement="floating"
+            [counter]="true"
+            minlength="6"
+            maxlength="12"
+            [(ngModel)]="usuario"
+            #usuarioInput="ngModel"
+            required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            label="Contraseña"
+            type="password"
+            labelPlacement="floating"
+            [counter]="true"
+            minlength="6"
+            maxlength="40"
+            [(ngModel)]="password"
+            name="password"
+            #passwordInput="ngModel"
+            required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            label="Confirmar Contraseña"
+            type="password"
+            labelPlacement="floating"
+            [counter]="true"
+            minlength="6"
+            maxlength="40"
+            [(ngModel)]="confirmPassword"
+            name="confirmPassword"
+            #confirmPasswordInput="ngModel"
+            required>
+          </ion-input>
+        </ion-item>
+        <ion-button expand="block" type="submit" [disabled]="!registerForm.valid || password !== confirmPassword">
+          Registrarse
+          <ion-icon slot="end" name="star"></ion-icon>
+        </ion-button>
+      </form>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button class="fot" [routerLink]="['/login']">Ya tengo cuenta</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
