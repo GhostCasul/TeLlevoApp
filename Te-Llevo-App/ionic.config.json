@@ -1,7 +1,0 @@
-{
-  "name": "Te-Llevo-App",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
